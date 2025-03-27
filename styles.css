@@ -1,0 +1,190 @@
+@font-face {
+    font-family: "Manrope";
+    src: url("/fonts/Manrope-VariableFont_wght.ttf") format("truetype");
+}
+
+body {
+    box-sizing: border-box;
+    background-color: hsl(210, 46%, 95%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 200px;
+    font-family: "Manrope";
+}
+
+.article {
+    margin-top: calc(10%);
+    height: 350px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 15px;
+    gap: 40px;
+}
+
+.article #drawer-img {
+    width: 40%;
+    height: 100%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.article .content {
+    display: flex;
+    flex-direction: column;
+    /* align-items: start; */
+    padding-right: 40px;
+}
+
+.content h1 {
+    font-size: 24px;
+    color: hsl(217, 19%, 35%);
+
+}
+
+.content p {
+    font-size: 13px;
+    color: hsl(214, 17%, 51%);
+}
+
+.article-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.author #author-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 36px;
+}
+
+.author #author-name {
+    position: relative;
+    top: 5px;
+}
+
+.author #date {
+    position: relative;
+    bottom: 3px;
+}
+
+.share-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    cursor: pointer;
+}
+
+.icons {
+    display: flex;
+    gap: 10px;
+    transition: 0.3s;
+}
+
+.icon:hover {
+    color: hsl(214, 17%, 51%);
+}
+
+.share-container #share-popup {
+    position: absolute;
+    bottom: 40px;
+    right: -100px;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    padding-left: 0px;
+    padding-right: 5px;
+    width: 170px;
+    height: 10px;
+    display: none;
+    padding: 20px;
+    color: white;
+    border-radius: 15px;
+    background-color: hsl(217, 19%, 35%);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 55% 90%, 50% 100%, 45% 90%, 0 90%);
+}
+
+.share-container p {
+    color: hsl(210, 46%, 95%);
+}
+
+.share-btn {
+    font-size: 16px;
+    color: hsl(217, 19%, 35%);
+    padding: 8px;
+    border-radius: 50%;
+    background-color: hsl(210, 46%, 95%);
+    transition: 0.3;
+}
+
+.share-btn:hover {
+    background-color: hsl(217, 19%, 35%);
+    color: hsl(210, 46%, 95%);
+}
+
+@media(max-width: 768px) {
+    .article {
+        flex-direction: column;
+        margin-top: calc(10%);
+        height: auto;
+        width: 400px;
+        align-items: center;
+        justify-content: space-between;
+        background-color: white;
+        border-radius: 15px;
+        gap: 20px;
+    }
+
+    .article #drawer-img {
+        width: 100%;
+        height: auto;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        border-bottom-left-radius: 0px;
+    }
+
+    .article .content {
+        display: flex;
+        flex-direction: column;
+        padding-right: 0px;
+        padding: 0px 40px 0px 40px;
+    }
+
+    .content h1 {
+        font-size: 20px;
+        color: hsl(217, 19%, 35%);
+
+    }
+
+    .content p {
+        font-size: 14px;
+        color: hsl(214, 17%, 51%);
+    }
+
+    .share-container #share-popup {
+        align-items: center;
+        justify-content: center;
+        gap: 25px;
+        width: auto;
+        height: auto;
+        display: none;
+        padding: 20px;
+        color: white;
+        border-radius: 15px;
+        background-color: hsl(217, 19%, 35%);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        clip-path: none;
+    }
+}
